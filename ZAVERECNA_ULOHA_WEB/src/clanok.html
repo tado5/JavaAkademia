@@ -1,0 +1,123 @@
+<!doctype html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="tartry.css" media="screen">
+    <link rel="stylesheet" href="tatry_print.css" media="print">
+    <title> Vysoke Tatry </title>
+
+
+</head>
+
+
+<header>
+    <img src="vysoketatry.jpg" alt="Vysoke Tatry">
+    <br>
+    <hr>
+    <br>
+    <ul>
+        <li><a href="VysokeTatry.html"> HOME</a></li>
+        <li><a href="vrchy.html">Vrchy</a></li>
+        <li><a href="pleso.html">Strbske pleso</a></li>
+        <li><a href="POCASIE.html">Pocasie</a></li>
+        <li><a href="clanok.html">CLANOK</a></li>
+
+    </ul>
+</header>
+
+<BODY>
+<MAIN>
+
+
+    <form id="frmArt" method="post" action="badProcessing.html">
+        <label for="title">NAZOV:</label><br>
+        <input type="text" name="title" id="title" size="50" maxlength="100" pattern="\S[\S\s]*" required
+               title="Názov článku. Povinná položka. Maximálna dĺžka: 100 znakov. Prvý znak nesmie byť medzera."
+               placeholder="napr. Môj prvý príbeh"/>
+        <br>
+        <label for="title">AUTOR:</label><br>
+        <input type="text" name="author" id="author" size="50" maxlength="100" pattern="\S[\S\s]*" required
+               title="Meno autora clanku" placeholder=" napr. Janko Hrasko"/>
+
+
+        <br>
+        <label for="content">Text článku:</label><br>
+        <textarea name="content" id="content" spellcheck="true" lang="sk" cols="52" rows="10" required
+                  title="Obsah článku. Povinná položka.  Môže byť obyčajný text alebo html."></textarea>
+        <br>
+
+
+        <br><br>
+
+        <label for="dizajn">Paci sa ti dizajn stranky ? </label>
+        <input type="checkbox" id="dizajn" name="ano"/>
+        <label for="dizajn"> ANO</label>
+
+        <input type="checkbox" id="dizajn1" name="nie"/>
+        <label for="dizajn1">NIE</label>
+
+        <input type="checkbox" id="dizajn2" name="najkrajsia"/>
+        <label for="dizajn2"> NAJKRAJSIA</label>
+
+        <input type="checkbox" id="dizajn3" name="celeZle"/>
+        <label for="dizajn3"> CELE ZLE</label>
+
+        <br><br>
+
+        <label for="zmena">Co by si zmenil ? </label>
+        <input type="checkbox" id="zmena" name="NIC"/>
+        <label for="zmena"> OBSAH</label>
+
+        <input type="checkbox" id="zmena1" name="VSETKO"/>
+        <label for="zmena1">OBRAZKY</label>
+
+        <input type="checkbox" id="zmena2" name="OBSAH"/>
+        <label for="zmena2"> VSETKO</label>
+
+        <input type="checkbox" id="zmena3" name="OBRAZKY"/>
+        <label for="zmena3"> NIC</label>
+
+        <br><br>
+
+        <label for="vysoketatry">Mas rad Vysoke tatry</label>
+        <input type="radio" id="VysokeTatry" name="LIKE" value="1" checked/>
+        <label for="vysoketatry">ANO</label>
+
+        <input type="radio" id="vysoketatry0" name="LIKE" value="0"/>
+        <label for="vysoketatry0">NIE</label>
+
+
+        <br><br>
+
+        <label for="casto1"> Ako casto chodis do Vysokych tatier</label>
+
+        <input type="radio" id="casto1" name="cas" value="1" checked/>
+        <label for="casto1"> Raz za rok</label>
+
+        <input type="radio" id="casto2" name="cas" value="2"/>
+        <label for="casto2"> menej ako 5x rocne</label>
+
+        <input type="radio" id="casto3" name="cas" value="3"/>
+        <label for="casto3">menej ako 15x rocne</label>
+
+        <input type="radio" id="casto4" name="cas" value="4"/>
+        <label for="casto4"> som tam stale</label>
+
+        <br>
+        <br>
+        <button type="submit">
+            Ulož článok
+        </button>
+    </form>
+
+    <!-- Vlozenie jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/jquery.min.js"><\/script>')</script>
+
+    <!-- Vlozenie skriptu tohto dokumentu -->
+    <script src="clanokJS.js"></script>
+
+
+</main>
+</body>
+</html>

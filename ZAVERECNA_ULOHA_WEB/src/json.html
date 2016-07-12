@@ -1,0 +1,41 @@
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Mustache šablona</title>
+</head>
+<body>
+
+<div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+    <script>window.Mustache || document.write('<script src="mustache.min.js"><\/script>')</script>
+    <script type="text/javascript">
+
+
+        var text = '{"ziaci":[{"meno":"Jozko","priezvisko":"Mrkva","hodnotenie":[{"predmet":"matematika","znamka":1},{"predmet":"slovenčina","znamka":3},{"predmet":"angličtina","znamka":2}]},{"meno":"Ferko","priezvisko":"Kapusta","hodnotenie":[{"predmet":"matematika","znamka":4},{"predmet":"slovenčina","znamka":1},{"predmet":"angličtina","znamka":2}]},{"meno":"Janka","priezvisko":"Hrušková","hodnotenie":[{"predmet":"matematika","znamka":1},{"predmet":"slovenčina","znamka":1},{"predmet":"angličtina","znamka":1}]},{"meno":"Pavol","priezvisko":"Paprika"},{"meno":"Petra","priezvisko":"Višňová","hodnotenie":[{"predmet":"matematika","znamka":3},{"predmet":"slovenčina","znamka":1},{"predmet":"angličtina","znamka":1}]}]}';
+        document.writeln("<h2> <i>JSON PARSE</i></h2>");
+
+
+        var object = JSON.parse(text);
+        var tmpl1 = "{{#ziaci}}<h2><hr> {{meno}} {{priezvisko}}</h2><p>Znamky: {{^hodnotenie}} <ol>nema</ol> {{/hodnotenie}} <ol>{{#hodnotenie}} <li>{{predmet}}  {{znamka}} {{^znamka}} nema{{/znamka}}</li>{{/hodnotenie}}</ol> </p><hr> {{/ziaci}} ";
+
+        document.write(Mustache.render(tmpl1, object));
+
+        function usporiadajHodnotenie(object) {
+            if (hod1.znamka > hod2.znamka) {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+
+object.text.forEach(usporiadajHodnotenie);
+
+
+
+    </script>
+</div>
+
+
+</body>
+</html>
